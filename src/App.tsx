@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import react from './assets/react.svg';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -136,30 +137,25 @@ function App() {
 
           {/* About Section */}
           <section id="about" className="flex w-screen h-screen justify-center items-center">
-            <div className='w-[75vw] border-2'>
-              <div className="text-center mb-16 reveal">
-                  <h2 className="text-4xl font-bold text-gray-900">About Me</h2>
-                  <p className="text-gray-500 mt-2">A little bit about my journey and skills.</p>
-              </div>
+            <div className='flex justify-center items-center w-[75vw] h-[70vh]'>
               <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
                   <div className="w-full md:w-1/3 reveal">
-                      <img src="https://placehold.co/400x400/e2e8f0/1e293b?text=Jane+Doe" alt="Jane Doe" className="rounded-full shadow-2xl mx-auto border-4 border-white"/>
+                      <img src="https://placehold.co/400x400/e2e8f0/1e293b?text=Lawryan+Andrew" alt="Lawryan Andrew" className="rounded-full shadow-2xl mx-auto border-4 border-white"/>
                   </div>
                   <div className="w-full md:w-2/3 reveal">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">My Story</h3>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">About Me</h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
                           I'm a passionate web developer with a love for creating beautiful, functional, and user-centered digital experiences. With a background in design, I bridge the gap between aesthetics and functionality, ensuring every project is not just powerful, but also a delight to use.
                       </p>
                       <h3 className="text-2xl font-bold text-gray-900 mb-4">My Skills</h3>
                       <div className="flex flex-wrap gap-4">
-                          {/* Skill Icons */}
                           <div className="flex items-center bg-white p-3 rounded-lg space-x-2 hover:scale-105 transition-transform border border-gray-200 shadow-sm">
                               <svg className="w-6 h-6 text-sky-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"></path></svg>
                               <span className="text-gray-800">Tailwind</span>
                           </div>
                           <div className="flex items-center bg-white p-3 rounded-lg space-x-2 hover:scale-105 transition-transform border border-gray-200 shadow-sm">
-                              <svg className="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0L7.84 5.45a1.72 1.72 0 00-1.63.94l-2.28 4.4a1.72 1.72 0 00-.01 1.48l2.28 4.4a1.72 1.72 0 001.63.94l.67 1.34c.38 1.56 2.6 1.56 2.98 0l.67-1.34a1.72 1.72 0 001.63-.94l2.28-4.4a1.72 1.72 0 00.01-1.48l-2.28-4.4a1.72 1.72 0 00-1.63-.94L11.49 3.17zm-1.89 1.45l.2-.4a.22.22 0 01.4 0l.2.4l.4.81a.22.22 0 010 .2l-.4.81l-.2.4a.22.22 0 01-.4 0l-.2-.4l-.4-.81a.22.22 0 010-.2l.4-.81zM10 12a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path></svg>
-                              <span className="text-gray-800">React</span>
+                            <img src={react} alt="Tailwind CSS logo" className="w-6 h-6" />
+                            <span className="text-gray-800">React</span>
                           </div>
                           <div className="flex items-center bg-white p-3 rounded-lg space-x-2 hover:scale-105 transition-transform border border-gray-200 shadow-sm">
                               <svg className="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M21.36,9.51a2.2,2.2,0,0,0-1.47-2.3,10.6,10.6,0,0,0-11.72,0,2.2,2.2,0,0,0-1.47,2.3c-.15,1.52.74,4,3.75,5.66,2.3,1.27,5.55,1.27,7.85,0,3-1.63,3.9-4.14,3.75-5.66ZM12,13.4a2.76,2.76,0,1,1,2.75-2.76A2.76,2.76,0,0,1,12,13.41Zm0-15.4a12,12,0,1,0,12,12A12,12,0,0,0,12-2Zm0,21.6A9.6,9.6,0,1,1,21.6,9.6,9.62,9.62,0,0,1,12,19.6Z"></path></svg>
