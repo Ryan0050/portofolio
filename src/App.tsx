@@ -135,7 +135,8 @@ function App() {
           </section>
 
           {/* About Section */}
-          <section id="about" className="py-24 px-6">
+          <section id="about" className="flex w-screen h-screen justify-center items-center">
+            <div className='w-[75vw] border-2'>
               <div className="text-center mb-16 reveal">
                   <h2 className="text-4xl font-bold text-gray-900">About Me</h2>
                   <p className="text-gray-500 mt-2">A little bit about my journey and skills.</p>
@@ -171,6 +172,7 @@ function App() {
                       </div>
                   </div>
               </div>
+            </div>
           </section>
 
           {/* Projects Section */}
