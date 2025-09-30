@@ -85,7 +85,7 @@ function App() {
   return (
     <>
       <header id="header" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-6 py-2 flex justify-between items-center">
             <a href="#" className="text-2xl font-bold text-gray-900">LA</a>
             <nav className="hidden md:flex space-x-8 items-center">
                 <a href="#about" className="text-gray-600 hover:text-sky-500 transition-colors">About</a>
@@ -218,99 +218,208 @@ function App() {
           </section>
 
           {/* Projects Section */}
-          <section id="projects" className="py-24 px-6 border-2">
-            <div className="text-center mb-16 reveal">
-                <h2 className="text-4xl font-bold text-gray-900">Featured Projects</h2>
-                <p className="text-gray-500 mt-2">A selection of my best work.</p>
+          <section id="projects" className="py-24 flex justify-center">
+            <div className="flex flex-col w-full max-w-[75vw] gap-15">
+                <div className="text-center reveal">
+                    <h2 className="text-4xl font-bold text-gray-900">Featured Projects</h2>
+                    <p className="text-gray-500 mt-2">A selection of my best work.</p>
+                </div>
+
+                {/* --- NEW 2-COLUMN PROJECT GRID --- */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                    {/* --- Project Card 1 --- */}
+                    <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
+                        <a href="#">
+                            <img 
+                                src="https://placehold.co/1200x800/e2e8f0/0ea5e9?text=Project+One" 
+                                alt="Project 1" 
+                                className="w-full h-56 object-cover"
+                            />
+                        </a>
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">E-commerce Platform</h3>
+                            <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                                A full-stack e-commerce site with payment integration and an admin dashboard.
+                            </p>
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">React</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Node.js</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">PostgreSQL</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Stripe</span>
+                                <span className="bg-gray-200 text-gray-500 font-medium px-3 py-1 rounded-md text-xs">+2 more</span>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <a href="#" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <span>View Details</span>
+                                </a>
+                                <a href="#" className="px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* --- Project Card 2 --- */}
+                    <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
+                        <a href="#">
+                            <img 
+                                src="https://placehold.co/1200x800/e2e8f0/6366f1?text=Project+Two" 
+                                alt="Project 2" 
+                                className="w-full h-56 object-cover"
+                            />
+                        </a>
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">Data Visualization Dashboard</h3>
+                            <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                                An interactive dashboard for visualizing complex datasets using D3.js.
+                            </p>
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">JavaScript</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">D3.js</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">HTML5</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">CSS3</span>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <a href="#" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <span>View Details</span>
+                                </a>
+                                <a href="#" className="px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Add more project cards here following the same structure */}
+
+                </div>
+
+                {/* --- NEW 2-COLUMN PROJECT GRID --- */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                    {/* --- Project Card 1 --- */}
+                    <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
+                        <a href="#">
+                            <img 
+                                src="https://placehold.co/1200x800/e2e8f0/0ea5e9?text=Project+One" 
+                                alt="Project 1" 
+                                className="w-full h-56 object-cover"
+                            />
+                        </a>
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">E-commerce Platform</h3>
+                            <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                                A full-stack e-commerce site with payment integration and an admin dashboard.
+                            </p>
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">React</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Node.js</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">PostgreSQL</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Stripe</span>
+                                <span className="bg-gray-200 text-gray-500 font-medium px-3 py-1 rounded-md text-xs">+2 more</span>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <a href="#" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <span>View Details</span>
+                                </a>
+                                <a href="#" className="px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* --- Project Card 2 --- */}
+                    <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
+                        <a href="#">
+                            <img 
+                                src="https://placehold.co/1200x800/e2e8f0/6366f1?text=Project+Two" 
+                                alt="Project 2" 
+                                className="w-full h-56 object-cover"
+                            />
+                        </a>
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">Data Visualization Dashboard</h3>
+                            <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                                An interactive dashboard for visualizing complex datasets using D3.js.
+                            </p>
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">JavaScript</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">D3.js</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">HTML5</span>
+                                <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">CSS3</span>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <a href="#" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <span>View Details</span>
+                                </a>
+                                <a href="#" className="px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Add more project cards here following the same structure */}
+
+                </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Project Card 1 */}
-                <div className="bg-white rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg border border-gray-200 reveal">
-                    <img src="https://placehold.co/600x400/e2e8f0/0ea5e9?text=Project+One" alt="Project 1" className="w-full h-48 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">E-commerce Platform</h3>
-                        <p className="text-gray-600 mb-4 text-sm">A full-stack e-commerce website with payment integration and an admin dashboard.</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
-                            <span className="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
-                            <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Stripe</span>
-                        </div>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-sky-500 hover:underline font-semibold">Live Demo</a>
-                            <a href="#" className="text-gray-500 hover:underline">View Code</a>
-                        </div>
-                    </div>
-                </div>
-                {/* Project Card 2 */}
-                <div className="bg-white rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg border border-gray-200 reveal">
-                    <img src="https://placehold.co/600x400/e2e8f0/6366f1?text=Project+Two" alt="Project 2" className="w-full h-48 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">Data Visualization Dashboard</h3>
-                        <p className="text-gray-600 mb-4 text-sm">An interactive dashboard for visualizing complex datasets using D3.js.</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                             <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
-                            <span className="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">D3.js</span>
-                        </div>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-sky-500 hover:underline font-semibold">Live Demo</a>
-                            <a href="#" className="text-gray-500 hover:underline">View Code</a>
-                        </div>
-                    </div>
-                </div>
-                {/* Project Card 3 */}
-                <div className="bg-white rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 shadow-lg border border-gray-200 reveal">
-                    <img src="https://placehold.co/600x400/e2e8f0/ec4899?text=Project+Three" alt="Project 3" className="w-full h-48 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">Mobile Task Manager</h3>
-                        <p className="text-gray-600 mb-4 text-sm">A cross-platform mobile app for task management built with React Native.</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React Native</span>
-                            <span className="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Firebase</span>
-                        </div>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-sky-500 hover:underline font-semibold">App Store</a>
-                            <a href="#" className="text-gray-500 hover:underline">View Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </section>
 
           {/* Experience Section */}
-          <section id="experience" className="py-24 border-2">
-               <div className="text-center mb-10 reveal">
-                  <h2 className="text-4xl font-bold text-gray-900">Career & Education</h2>
-                  <p className="text-gray-500 mt-2">My professional journey and qualifications.</p>
-              </div>
-              <div className="max-w-3xl mx-auto">
-                  <div className="relative border-l-2 border-gray-300 ml-4 pl-8 space-y-12">
-                       {/* Timeline Item 1 */}
-                      <div className="relative timeline-item reveal">
-                          <h3 className="text-xl font-bold text-gray-900">Senior Web Developer</h3>
-                          <p className="text-sky-600 font-semibold">Innovate Inc. | 2021 - Present</p>
-                          <p className="text-gray-600 mt-2 text-sm">Leading front-end development for key client projects. Mentoring junior developers and implementing best practices for code quality and performance.</p>
-                      </div>
-                      {/* Timeline Item 2 */}
-                      <div className="relative timeline-item reveal">
-                          <h3 className="text-xl font-bold text-gray-900">Junior Developer</h3>
-                          <p className="text-sky-600 font-semibold">Tech Solutions | 2019 - 2021</p>
-                          <p className="text-gray-600 mt-2 text-sm">Developed and maintained client websites using WordPress, JavaScript, and PHP. Collaborated with designers to translate mockups into responsive web pages.</p>
-                      </div>
-                      {/* Timeline Item 3 */}
-                      <div className="relative timeline-item reveal">
-                          <h3 className="text-xl font-bold text-gray-900">B.S. in Computer Science</h3>
-                          <p className="text-sky-600 font-semibold">University of Technology | 2015 - 2019</p>
-                          <p className="text-gray-600 mt-2 text-sm">Graduated with honors. Focused on software engineering, algorithms, and human-computer interaction. President of the university coding club.</p>
-                      </div>
-                  </div>
-              </div>
+          <section id="experience" className="py-24">
+            <div className="text-center mb-10 reveal">
+                <h2 className="text-4xl font-bold text-gray-900">Experience</h2>
+                <p className="text-gray-500 mt-2">My professional journey and qualifications.</p>
+            </div>
+            <div className="max-w-3xl mx-auto mb-20">
+                <div className="relative border-l-2 border-gray-300 ml-4 pl-8 space-y-12">
+                    {/* Timeline Item 1 */}
+                    <div className="relative timeline-item reveal">
+                        <h3 className="text-xl font-bold text-gray-900">Part-time Software Laboratory Assistant</h3>
+                        <p className="text-sky-600 font-semibold">Laboratory Center (LCAS) | 2025 - Present</p>
+                        <p className="text-gray-600 mt-2 text-sm">A Part-time Laboratory Software Assistant, teaching and guiding students through practical software exercises and lab work.</p>
+                    </div>
+                    {/* Timeline Item 2 */}
+                    <div className="relative timeline-item reveal">
+                        <h3 className="text-xl font-bold text-gray-900">Ureeka Member</h3>
+                        <p className="text-sky-600 font-semibold">Ureeka Organization | 2024 - Present</p>
+                        <p className="text-gray-600 mt-2 text-sm">An active Ureeka member, sharpening my skills through specialized AI training and practical project development..</p>
+                    </div>
+                    {/* Timeline Item 3 */}
+                    <div className="relative timeline-item reveal">
+                        <h3 className="text-xl font-bold text-gray-900">Binus Scholarship Mentor</h3>
+                        <p className="text-sky-600 font-semibold">Bina Nusantara University | 2024 - 2025</p>
+                        <p className="text-gray-600 mt-2 text-sm">A Binus Scholarship Mentor, guiding and supporting fellow students to achieve academic and personal success.</p>
+                    </div>
+                </div>
+            </div>
+            <div className="text-center mb-10 reveal">
+                <h2 className="text-4xl font-bold text-gray-900">Education</h2>
+                <p className="text-gray-500 mt-2">My academic background and qualifications.</p>
+            </div>
+            <div className="max-w-3xl mx-auto">
+                <div className="relative border-l-2 border-gray-300 ml-4 pl-8 space-y-12">
+                    {/* Timeline Item 1 */}
+                    <div className="relative timeline-item reveal">
+                        <h3 className="text-xl font-bold text-gray-900">Bachelor of Computer Science</h3>
+                        <p className="text-sky-600 font-semibold">Bina Nusantara Univeristy | 2023 - 2027</p>
+                        <p className="text-gray-600 mt-2 text-sm">Second year Computer Science student at Binus University (Intelligent Systems specialization).</p>
+                    </div>
+                </div>
+            </div>
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="py-24 text-center">
+          <section id="contact" className="py-25 text-center">
               <div className="reveal">
                   <h2 className="text-4xl font-bold text-gray-900">Let's Connect</h2>
-                  <p className="text-gray-500 mt-2 mb-8 max-w-xl mx-auto">I'm currently available for freelance work and open to new opportunities. Feel free to reach out!</p>
+                  <p className="text-gray-500 mt-2 mb-8 max-w-xl mx-auto">I'm currently available and open to new opportunities. <br /> Feel free to reach out!</p>
                   <a href="mailto:hello@janedoe.com" className="inline-block bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-sky-600 transition-colors duration-300 shadow-lg shadow-sky-500/30">
                       Say Hello
                   </a>
@@ -326,7 +435,7 @@ function App() {
       {/* Footer */}
       <footer className="border-t border-gray-200">
           <div className="container mx-auto px-6 py-6 text-center text-gray-500">
-              <p>&copy; 2025 Jane Doe. Crafted with care.</p>
+              <p>&copy; 2025 Portfolio by Lawryan Andrew</p>
           </div>
       </footer>
     </>
