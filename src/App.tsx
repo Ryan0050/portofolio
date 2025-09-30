@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import react from './assets/react.svg';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,17 +44,14 @@ function App() {
       timeoutId = window.setTimeout(type, newTextDelay + 250);
     }
 
-    // Cleanup function to clear timeout when the component unmounts
     return () => clearTimeout(timeoutId);
-  }, []); // The empty array [] means this effect runs only once when the component mounts.
-
-  // Scroll-based animations and header effect logic
+  }, []); 
+  
   useEffect(() => {
     const revealElements = document.querySelectorAll('.reveal');
     const header = document.getElementById('header');
 
     const handleScroll = () => {
-      // Header effect
       if (header) {
         if (window.scrollY > 50) {
           header.classList.add('py-2');
@@ -66,7 +62,6 @@ function App() {
         }
       }
       
-      // Reveal on scroll effect
       const windowHeight = window.innerHeight;
       for (let i = 0; i < revealElements.length; i++) {
         const elementTop = revealElements[i].getBoundingClientRect().top;
@@ -78,24 +73,17 @@ function App() {
       }
     };
 
-    // Run once on load
     handleScroll();
 
-    // Add event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup function to remove the listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Also runs only once.
-
-  // --- JSX Return ---
-  // A React component must return a single root element. We use a React Fragment (<> ... </>)
-  // to wrap the main and footer elements so they count as one.
+  }, []);
+  
   return (
     <>
-      {/* Header */}
       <header id="header" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" className="text-2xl font-bold text-gray-900">LA</a>
@@ -128,7 +116,7 @@ function App() {
               <p className="text-xl md:text-2xl mt-4 text-gray-600">
                   I'm a <span id="typed-text" ref={typedTextSpan} className="font-semibold text-gray-900"></span><span className="typed-cursor"></span>
               </p>
-              <a href="#experience" className="mt-12 animate-bounce bg-sky-500 text-white rounded-full p-3 shadow-lg shadow-sky-500/30">
+              <a href="#about" className="mt-12 animate-bounce bg-sky-500 text-white rounded-full p-3 shadow-lg shadow-sky-500/30">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                   </svg>
@@ -143,30 +131,88 @@ function App() {
                       <img src="https://placehold.co/400x400/e2e8f0/1e293b?text=Lawryan+Andrew" alt="Lawryan Andrew" className="rounded-full shadow-2xl mx-auto border-4 border-white"/>
                   </div>
                   <div className="w-full md:w-2/3 reveal">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">About Me</h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                          I'm a passionate web developer with a love for creating beautiful, functional, and user-centered digital experiences. With a background in design, I bridge the gap between aesthetics and functionality, ensuring every project is not just powerful, but also a delight to use.
+                    <div className='flex flex-col gap-5'>
+                      <h2 className="text-4xl font-bold text-gray-900">About me</h2>
+                      <p className="text-gray-600 leading-relaxed mb-8">
+                          I'm a passionate software engineer from Binus University who loves to explore new technologies and continuously improve my craft.
                       </p>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">My Skills</h3>
-                      <div className="flex flex-wrap gap-4">
-                          <div className="flex items-center bg-white p-3 rounded-lg space-x-2 hover:scale-105 transition-transform border border-gray-200 shadow-sm">
-                              <svg className="w-6 h-6 text-sky-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"></path></svg>
-                              <span className="text-gray-800">Tailwind</span>
-                          </div>
-                          <div className="flex items-center bg-white p-3 rounded-lg space-x-2 hover:scale-105 transition-transform border border-gray-200 shadow-sm">
-                            <img src={react} alt="Tailwind CSS logo" className="w-6 h-6" />
-                            <span className="text-gray-800">React</span>
-                          </div>
-                          <div className="flex items-center bg-white p-3 rounded-lg space-x-2 hover:scale-105 transition-transform border border-gray-200 shadow-sm">
-                              <svg className="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M21.36,9.51a2.2,2.2,0,0,0-1.47-2.3,10.6,10.6,0,0,0-11.72,0,2.2,2.2,0,0,0-1.47,2.3c-.15,1.52.74,4,3.75,5.66,2.3,1.27,5.55,1.27,7.85,0,3-1.63,3.9-4.14,3.75-5.66ZM12,13.4a2.76,2.76,0,1,1,2.75-2.76A2.76,2.76,0,0,1,12,13.41Zm0-15.4a12,12,0,1,0,12,12A12,12,0,0,0,12-2Zm0,21.6A9.6,9.6,0,1,1,21.6,9.6,9.62,9.62,0,0,1,12,19.6Z"></path></svg>
-                              <span className="text-gray-800">Node.js</span>
-                          </div>
-                          <div className="flex items-center bg-white p-3 rounded-lg space-x-2 hover:scale-105 transition-transform border border-gray-200 shadow-sm">
-                              <svg className="w-6 h-6 text-pink-500" fill="currentColor" viewBox="0 0 24 24"><path d="M21.92,4.09A3.06,3.06,0,0,0,19.79,2H16.18a3.06,3.06,0,0,0-2.12.89L3.33,13.62a3,3,0,0,0,0,4.24l4.24,4.24a3,3,0,0,0,4.24,0l9.12-9.12A3.06,3.06,0,0,0,21.92,4.09Zm-4.2,3.31L16.4,6.08,18,4.41l1.32,1.32ZM8.12,20.12,3.88,15.88l5.83-5.83L14,14.29Zm7.88-7.88-5,5L6.76,13,11,8.76l.71.71a1,1,0,0,0,1.41,0l3-3a1,1,0,0,0,0-1.41l-.71-.71,3-3L19,6.76Z"></path></svg>
-                              <span className="text-gray-800">Figma</span>
-                          </div>
-                      </div>
-                  </div>
+                    </div>
+
+                    {/* --- INFO CARDS SECTION (No Changes Here) --- */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+                        {/* Card 1: University */}
+                        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center space-x-4">
+                            <div className="bg-white p-2 rounded-full border border-gray-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-5.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-5.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p className="font-bold text-gray-900">BINUS University</p>
+                                <p className="text-sm text-gray-600">Computer Science</p>
+                            </div>
+                        </div>
+                        {/* Card 2: GPA */}
+                        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center space-x-4">
+                            <div className="bg-white p-2 rounded-full border border-gray-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p className="font-bold text-gray-900">GPA: 3.9</p>
+                                <p className="text-sm text-gray-600">Academic</p>
+                            </div>
+                        </div>
+                        {/* Card 3: Role */}
+                        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center space-x-4">
+                            <div className="bg-white p-2 rounded-full border border-gray-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p className="font-bold text-gray-900">Part-time lab assistant</p>
+                                <p className="text-sm text-gray-600">Current Role</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* --- NEW BUTTON GROUP SECTION --- */}
+                    <div className="flex flex-wrap items-center gap-4">
+                        {/* Button 1: View My Work */}
+                        <a 
+                            href="#projects" 
+                            className="px-6 py-3 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2"
+                        >
+                            <span>View My Work</span>
+                            <span>&rarr;</span>
+                        </a>
+                        
+                        {/* Button 2: View CV */}
+                        <a 
+                            href="/jane-doe-cv.pdf" 
+                            download 
+                            className="px-6 py-3 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            <span>View CV</span>
+                        </a>
+
+                        {/* Link 3: Get In Touch */}
+                        <a 
+                            href="#contact" 
+                            className="font-semibold text-gray-600 hover:text-sky-500 transition-colors"
+                        >
+                            Get In Touch
+                        </a>
+                    </div>
+
+                </div>
               </div>
             </div>
           </section>
