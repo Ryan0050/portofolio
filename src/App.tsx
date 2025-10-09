@@ -5,6 +5,7 @@ import safesip from './assets/safesip.png';
 import welearn from './assets/welearn.png';
 import hydro from './assets/hydro.jpg';
 import research from './assets/research.png';
+import ryan from './assets/ryan.jpg';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -134,7 +135,7 @@ function App() {
             <div className='flex justify-center items-center w-[75vw] h-[70vh]'>
               <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
                   <div className="w-full md:w-1/3 reveal">
-                      <img src="https://placehold.co/400x400/e2e8f0/1e293b?text=Lawryan+Andrew" alt="Lawryan Andrew" className="rounded-full shadow-2xl mx-auto border-4 border-white"/>
+                      <img src={ryan} alt="Lawryan Andrew" className="rounded-full shadow-2xl mx-auto border-4 border-white"/>
                   </div>
                   <div className="w-full md:w-2/3 reveal">
                     <div className='flex flex-col gap-5'>
@@ -432,22 +433,19 @@ function App() {
             </div>
             <div className="max-w-3xl mx-auto mb-20">
                 <div className="relative border-l-2 border-gray-300 ml-4 pl-8 space-y-12">
-                    {/* Timeline Item 1 */}
                     <div className="relative timeline-item reveal">
                         <h3 className="text-xl font-bold text-gray-900">Part-time Software Laboratory Assistant</h3>
-                        <p className="text-sky-600 font-semibold">Laboratory Center (LCAS) | 2025 - Present</p>
+                        <p className="text-sky-600 font-semibold">Laboratory Center (LCAS) | September 2025 - Present</p>
                         <p className="text-gray-600 mt-2 text-sm">A Part-time Laboratory Software Assistant, teaching and guiding students through practical software exercises and lab work.</p>
                     </div>
-                    {/* Timeline Item 2 */}
                     <div className="relative timeline-item reveal">
-                        <h3 className="text-xl font-bold text-gray-900">Ureeka Member</h3>
-                        <p className="text-sky-600 font-semibold">Ureeka Organization | 2024 - Present</p>
-                        <p className="text-gray-600 mt-2 text-sm">An active Ureeka member, sharpening my skills through specialized AI training and practical project development..</p>
+                        <h3 className="text-xl font-bold text-gray-900">UREEKA Member</h3>
+                        <p className="text-sky-600 font-semibold">UREEKA Organization | March 2025 - Present</p>
+                        <p className="text-gray-600 mt-2 text-sm">An active UREEKA member, sharpening my skills through specialized AI training and practical project development.</p>
                     </div>
-                    {/* Timeline Item 3 */}
                     <div className="relative timeline-item reveal">
                         <h3 className="text-xl font-bold text-gray-900">Binus Scholarship Mentor</h3>
-                        <p className="text-sky-600 font-semibold">Bina Nusantara University | 2024 - 2025</p>
+                        <p className="text-sky-600 font-semibold">Bina Nusantara University | February 2025 - July 2025</p>
                         <p className="text-gray-600 mt-2 text-sm">A Binus Scholarship Mentor, guiding and supporting fellow students to achieve academic and personal success.</p>
                     </div>
                 </div>
@@ -458,7 +456,6 @@ function App() {
             </div>
             <div className="max-w-3xl mx-auto">
                 <div className="relative border-l-2 border-gray-300 ml-4 pl-8 space-y-12">
-                    {/* Timeline Item 1 */}
                     <div className="relative timeline-item reveal">
                         <h3 className="text-xl font-bold text-gray-900">Bachelor of Computer Science</h3>
                         <p className="text-sky-600 font-semibold">Bina Nusantara Univeristy | 2023 - 2027</p>
