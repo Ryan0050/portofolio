@@ -238,8 +238,8 @@ function App() {
                         <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
                             <img 
                                 src={pneuscan} 
-                                alt="Project 1" 
-                                className="w-full h-56 object-cover"
+                                alt="Project 1"
+                                className="h-56 w-full object-contain bg-gray-100"
                             />
                             <div className="p-6">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-2">PneuScan</h3>
@@ -276,7 +276,7 @@ function App() {
                             <img 
                                 src={safesip} 
                                 alt="Project 2" 
-                                className="w-full h-56 object-cover"
+                                className="h-56 w-full object-contain bg-gray-100"
                             />
                             <div className="p-6">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-2">SafeSip</h3>
@@ -309,15 +309,12 @@ function App() {
 
                     </div>
 
-                    {/* --- NEW 2-COLUMN PROJECT GRID --- */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-                        {/* --- Project Card 1 --- */}
                         <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
                             <img 
                                 src={welearn} 
-                                alt="Project 1" 
-                                className="w-full h-56 object-cover"
+                                alt="Project 3" 
+                                className="h-56 w-full object-contain bg-gray-100"
                             />
                             <div className="p-6">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-2">WeLearn</h3>
@@ -349,11 +346,10 @@ function App() {
                             </div>
                         </div>
 
-                        {/* --- Project Card 2 --- */}
                         <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
                             <img 
                                 src={hydro}
-                                alt="Project 2" 
+                                alt="Project 4" 
                                 className="h-56 w-full object-contain bg-gray-100"
                             />
                             <div className="p-6">
@@ -385,8 +381,6 @@ function App() {
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-                        {/* --- Project Card 1 --- */}
                         <div className="flex flex-col items-center bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
                             <img 
                                 src={research} 
@@ -409,16 +403,18 @@ function App() {
                                     <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Research Methods</span>
                                 </div>
                                 <div className="flex items-center gap-4">
-                                    <a href="" target="_blank" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <a href="https://drive.google.com/file/d/1xo3yQn-_yK9ZStj9w2mg-wkD6eB3Yq4W/view?usp=sharing" target="_blank" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
                                         <span>View Paper</span>
                                     </a>
                                     <a 
-                                        href="https://github.com/reynardaj/WeLearn" 
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
-                                        className="px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2 text-sm">
-                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                        <span>Code</span>
+                                    href="https://drive.google.com/file/d/1efrIa9XEtelVM0_x7x2v5FCsCDIDtIOH/view?usp=drive_link" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="px-5 py-2.5 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <span>Video</span>
                                     </a>
                                 </div>
                             </div>
