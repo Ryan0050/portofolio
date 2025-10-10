@@ -115,7 +115,6 @@ function App() {
       </header>
 
       <main className="">
-          {/* Hero Section */}
           <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
                   <span className="gradient-text">Lawryan Andrew</span>
@@ -130,7 +129,6 @@ function App() {
               </a>
           </section>
 
-          {/* About Section */}
           <section id="about" className="flex w-screen h-screen justify-center items-center">
             <div className='flex justify-center items-center w-[75vw] h-[70vh]'>
               <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -145,9 +143,7 @@ function App() {
                       </p>
                     </div>
 
-                    {/* --- INFO CARDS SECTION (No Changes Here) --- */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-                        {/* Card 1: University */}
                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center space-x-4">
                             <div className="bg-white p-2 rounded-full border border-gray-200">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -161,7 +157,6 @@ function App() {
                                 <p className="text-sm text-gray-600">Computer Science</p>
                             </div>
                         </div>
-                        {/* Card 2: GPA */}
                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center space-x-4">
                             <div className="bg-white p-2 rounded-full border border-gray-200">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -173,7 +168,6 @@ function App() {
                                 <p className="text-sm text-gray-600">Academic</p>
                             </div>
                         </div>
-                        {/* Card 3: Role */}
                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center space-x-4">
                             <div className="bg-white p-2 rounded-full border border-gray-200">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -187,9 +181,7 @@ function App() {
                         </div>
                     </div>
 
-                    {/* --- NEW BUTTON GROUP SECTION --- */}
                     <div className="flex flex-wrap items-center gap-4">
-                        {/* Button 1: View My Work */}
                         <a 
                             href="#projects" 
                             className="px-6 py-3 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2"
@@ -198,10 +190,9 @@ function App() {
                             <span>&rarr;</span>
                         </a>
                         
-                        {/* Button 2: View CV */}
                         <a 
-                            href="/jane-doe-cv.pdf" 
-                            download 
+                            href="https://drive.google.com/file/d/1EyZ7WB4largI1Ym3XFJjtHV-4cu2Ujj7/view?usp=sharing" 
+                            target="_blank"
                             className="px-6 py-3 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 transition-all duration-300 flex items-center space-x-2"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -210,7 +201,6 @@ function App() {
                             <span>View CV</span>
                         </a>
 
-                        {/* Link 3: Get In Touch */}
                         <a 
                             href="#contact" 
                             className="font-semibold text-gray-600 hover:text-sky-500 transition-colors"
@@ -224,7 +214,6 @@ function App() {
             </div>
           </section>
 
-          {/* Projects Section */}
           <section id="projects" className="py-24 flex justify-center">
             <div className="flex flex-col w-full max-w-[75vw]">
                 <div className="text-center reveal mb-8">
@@ -232,10 +221,7 @@ function App() {
                     <p className="text-gray-500 mt-2">A selection of my best work.</p>
                 </div>
                 <div className='flex flex-col gap-20'>
-                    {/* --- NEW 2-COLUMN PROJECT GRID --- */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-                        {/* --- Project Card 1 --- */}
                         <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
                             <img 
                                 src={pneuscan} 
@@ -272,7 +258,6 @@ function App() {
                             </div>
                         </div>
 
-                        {/* --- Project Card 2 --- */}
                         <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 reveal">
                             <img 
                                 src={safesip} 
@@ -305,9 +290,6 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        
-                        {/* Add more project cards here following the same structure */}
-
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -320,7 +302,7 @@ function App() {
                             <div className="p-6">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-2">WeLearn</h3>
                                 <p className="text-gray-600 mb-4 leading-relaxed text-sm">
-                                    A Student led peer-to-peer online tutoring platform that connect tutees with tutors for personalized learning experiences.
+                                    A Student led peer-to-peer online tutoring platform that connects tutees with tutors for personalized learning experiences.
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Next.js</span>
@@ -329,10 +311,10 @@ function App() {
                                     <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Xendit</span>
                                     <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">TypeScript</span>
                                     <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">JavaScript</span>
-                                    <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">CSS</span>
+                                    <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Tailwind CSS</span>
                                 </div>
                                 <div className="flex items-center gap-4">
-                                    <a href="" target="_blank" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <a href="https://drive.google.com/drive/folders/1Eah1AFFQUxJ2bhjr7qzi3CtvjO-gD0AR?usp=sharing" target="_blank" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
                                         <span>View Projects</span>
                                     </a>
                                     <a 
@@ -365,7 +347,7 @@ function App() {
                                     <span className="bg-gray-200 text-gray-800 font-medium px-3 py-1 rounded-md text-xs">Dart</span>
                                 </div>
                                 <div className="flex items-center gap-4">
-                                    <a href="https://safesip.streamlit.app" target="_blank" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
+                                    <a href="https://www.youtube.com/watch?v=t7QdXe5TOIE" target="_blank" className="px-5 py-2.5 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition-all duration-300 flex items-center space-x-2 text-sm">
                                         <span>View Projects</span>
                                     </a>
                                     <a 
@@ -425,7 +407,6 @@ function App() {
             </div>
           </section>
 
-          {/* Experience Section */}
           <section id="experience" className="py-24">
             <div className="text-center mb-10 reveal">
                 <h2 className="text-4xl font-bold text-gray-900">Experience</h2>
@@ -459,24 +440,23 @@ function App() {
                     <div className="relative timeline-item reveal">
                         <h3 className="text-xl font-bold text-gray-900">Bachelor of Computer Science</h3>
                         <p className="text-sky-600 font-semibold">Bina Nusantara Univeristy | 2023 - 2027</p>
-                        <p className="text-gray-600 mt-2 text-sm">Second year Computer Science student at Binus University (Intelligent Systems specialization).</p>
+                        <p className="text-gray-600 mt-2 text-sm">Third year Computer Science student at Binus University (Intelligent Systems specialization).</p>
                     </div>
                 </div>
             </div>
           </section>
 
-          {/* Contact Section */}
           <section id="contact" className="py-25 text-center">
               <div className="reveal">
                   <h2 className="text-4xl font-bold text-gray-900">Let's Connect</h2>
                   <p className="text-gray-500 mt-2 mb-8 max-w-xl mx-auto">I'm currently available and open to new opportunities. <br /> Feel free to reach out!</p>
-                  <a href="mailto:lawryan.darisang@binus.ac.id" className="inline-block bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-sky-600 transition-colors duration-300 shadow-lg shadow-sky-500/30">
-                      Say Hello
+                  <a href="mailto:lawryan.darisang@binus.ac.id" target='_blank' className="inline-block bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-sky-600 transition-colors duration-300 shadow-lg shadow-sky-500/30">
+                      Get In Touch
                   </a>
                   <div className="flex justify-center space-x-6 mt-12">
                     <a href="https://github.com/Ryan0050" target="_blank" className="text-black-500 transition-opacity hover:opacity-80"><svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
                     <a href="https://www.linkedin.com/in/lawryan-andrew-17086b2b8" target="_blank" className="text-blue-500 transition-opacity hover:opacity-80"><svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                    <a href="mailto:lawryan0511@gmail.com" className="text-gray-500 transition-opacity hover:opacity-80"><svg className="w-8 h-8" viewBox="0 0 48 48">
+                    <a href="mailto:lawryan0511@gmail.com" target='_blank' className="text-gray-500 transition-opacity hover:opacity-80"><svg className="w-8 h-8" viewBox="0 0 48 48">
                         <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
                         <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.42-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
                         <path fill="#34A853" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
@@ -488,7 +468,6 @@ function App() {
           </section>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-gray-200">
           <div className="container mx-auto px-6 py-6 text-center text-gray-500">
               <p>&copy; 2025 Portfolio by Lawryan Andrew</p>
